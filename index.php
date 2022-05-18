@@ -8,8 +8,20 @@
     <script src=sorttable.js"></script>
 </head>
 <div>
-<table class="sortable">
+
+    <table >
+        <tr >
+            <th ><a href='./<?php echo $phpmyadminpath;?>'>
+            </a>PHP MyAdmin</th>
+            <th>Search : <input id="myInput" onkeyup="myFunction()" placeholder="Search for names.." type="text"  ></th>
+        </tr>
+
+    </table>
+
+<table id="myTable" class="sortable">
     <thead>
+
+
     <tr>
         <th>Filename</th>
         <th>Type</th>
@@ -78,4 +90,24 @@
 <h2><a href='./?hidden'>Show hidden files</a></h2>
 </div>
 </body>
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 </html>
