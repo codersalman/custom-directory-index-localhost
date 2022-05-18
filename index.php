@@ -4,10 +4,10 @@
 
     </title>
     <link rel="shortcut icon" href=".favicon.ico">
-    <link rel="stylesheet" href=".style.css">
-    <script src=".sorttable.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src=sorttable.js"></script>
 </head>
-
+<div>
 <table class="sortable">
     <thead>
     <tr>
@@ -30,7 +30,7 @@
     // Finds extensions of files
     function findexts($filename) {
         $filename=strtolower($filename);
-        $exts=split("[/\\.]", $filename);
+        $exts=explode("[/\\.]", $filename);
         $n=count($exts)-1;
         $exts=$exts[$n];
         return $exts;
@@ -63,6 +63,7 @@
         $timekey=date("YmdHis", filemtime($dirArray[$index]));
 
         // Print 'em
+        $class ='file';
         print("
       <tr class='$class'>
         <td><a href='./$namehref'>$name</a></td>
@@ -74,4 +75,7 @@
     ?>
     </tbody>
 </table>
+<h2><a href='./?hidden'>Show hidden files</a></h2>
+</div>
+</body>
 </html>
