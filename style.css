@@ -7,7 +7,7 @@ body {
     color: #333;
     font: 14px Sans-Serif;
     padding: 50px;
-    background: #eee;
+    background: #ffffff;
 }
 
 h1 {
@@ -19,6 +19,7 @@ h2 {
     font-size: 16px;
     text-align: center;
     padding: 0 0 12px 0;
+
 }
 
 #container {
