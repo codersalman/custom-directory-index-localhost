@@ -1,8 +1,6 @@
 <html>
 <head>
-    <title>
-
-    </title>
+    <title>Custom Local Host</title>
     <link rel="shortcut icon" href=".favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src=sorttable.js"></script>
