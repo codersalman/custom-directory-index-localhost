@@ -1,7 +1,7 @@
 # Custom-directory-index-localhost
 
 Clone this repo and unzip it in your Host Directory
-Edit localhost.config as per your requirement
+Edit the localhost.config as per your requirement
 
 
 Features 
